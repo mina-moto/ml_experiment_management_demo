@@ -1,0 +1,15 @@
+version: "3"
+services:
+  mlflow:
+    image: ml_experiment_management_demo
+    container_name: ml_experiment_management_demo_mlflow
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - $PWD:$PWD
+    working_dir: $PWD
+    ports:
+      - "5000:5000"
+    command: mlflow ui -h 0.0.0.0
+    restart: always

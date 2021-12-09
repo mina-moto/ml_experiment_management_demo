@@ -1,0 +1,31 @@
+[RunConfig]
+#実験名:mlflowの実験単位
+experiment_name="demo"
+description="概要"
+# 実行するTask
+task="Prediction"
+
+[PathConfig]
+# input
+input="./input/"
+
+# Preprocessorのoutput、Trainer、Evaluatorのinput
+# デフォルトはartifact_uri下、"./mlruns/{experiment_id}/{run_id}/artifacts/preprocessor/"となる。
+#preprocessor="./mlruns/"
+
+# Trainerのoutput、Evaluatorのinput
+# デフォルはトartifact_uri下"./mlruns/{experiment_id}/{run_id}/artifacts/trainer/"となる。
+#trainer="./mlruns/"
+
+# Predictionのoutput、
+# デフォルトはartifact_uri下"./mlruns/{experiment_id}/{run_id}/artifacts/prediction/"となる。
+#trainer="./mlruns/"
+
+[Preprocessor]
+train_columns=['PassengerId','Survived', 'Pclass', 'SibSp', 'Parch']
+test_columns=['PassengerId','Pclass', 'SibSp', 'Parch']
+
+[Trainer]
+seed=0
+
+[Prediction]
