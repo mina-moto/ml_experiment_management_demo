@@ -12,8 +12,8 @@ class Preprocessor(RunTask):
             "test": f"{self.path_config['input']}test.csv",
         }
         output_paths_dict = {
-            "train": f"{self.path_config['preprocessor']}train.csv",
-            "test": f"{self.path_config['preprocessor']}test.csv",
+            "train": f"{self.path_config['Preprocessor']}train.csv",
+            "test": f"{self.path_config['Preprocessor']}test.csv",
         }
         return input_paths_dict, output_paths_dict
 

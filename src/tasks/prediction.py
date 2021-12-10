@@ -13,11 +13,11 @@ from tasks.trainer import Trainer
 class Prediction(RunTask):
     def build_input_output_path_dicts(self) -> Tuple[dict, dict]:
         input_paths_dict = {
-            "test": f"{self.path_config['preprocessor']}test.csv",
-            "model": f"{self.path_config['trainer']}model",
+            "test": f"{self.path_config['Preprocessor']}test.csv",
+            "model": f"{self.path_config['Trainer']}model",
         }
         output_paths_dict = {
-            "test_prediction": f"{self.path_config['prediction']}test_prediction.csv", }
+            "test_prediction": f"{self.path_config['Prediction']}test_prediction.csv", }
         return input_paths_dict, output_paths_dict
 
     def run(self):

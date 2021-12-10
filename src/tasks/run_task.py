@@ -23,7 +23,10 @@ class RunTask(luigi.Task):
 
         # タスクごとにPathConfigが指定されていなければデフォルト値設定
         # デフォルトパス ./mlruns/{experiment_id}/{run_id}/artifacts/{task_name}/
-        for task_name in ["preprocessor", "trainer", "prediction"]:
+        configs_keys = get_config(os.getenv("LUIGI_CONFIG_PARSER")).data.keys()
+        task_list = [i for i in configs_keys if i not in [
+            "RunConfig", 'PathConfig']]
+        for task_name in task_list:
             self.path_config.setdefault(
                 task_name,
                 f"{self.artifacts_uri_path}{task_name}/")

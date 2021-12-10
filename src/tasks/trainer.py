@@ -1,4 +1,3 @@
-import os
 import pickle
 from typing import Tuple
 
@@ -15,11 +14,11 @@ from tasks.run_task import RunTask
 class Trainer(RunTask):
     def build_input_output_path_dicts(self) -> Tuple[dict, dict]:
         input_paths_dict = {
-            "train": f"{self.path_config['preprocessor']}train.csv",
-            "test": f"{self.path_config['preprocessor']}test.csv",
+            "train": f"{self.path_config['Preprocessor']}train.csv",
+            "test": f"{self.path_config['Preprocessor']}test.csv",
         }
         output_paths_dict = {
-            "model": f"{self.path_config['trainer']}model",
+            "model": f"{self.path_config['Trainer']}model",
         }
         return input_paths_dict, output_paths_dict
 

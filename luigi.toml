@@ -10,16 +10,15 @@ task="Prediction"
 input="./input/"
 
 # Preprocessorのoutput、Trainer、Evaluatorのinput
-# デフォルトはartifact_uri下、"./mlruns/{experiment_id}/{run_id}/artifacts/preprocessor/"となる。
-#preprocessor="./mlruns/"
-
+# デフォルトはartifact_uri下、"./mlruns/{experiment_id}/{run_id}/artifacts/Preprocessor/"となる。
+#Preprocessor="./mlruns/1/ba79349b64ac4493ac1f6c6eac306e68/artifacts/Preprocessor/"
 # Trainerのoutput、Evaluatorのinput
-# デフォルはトartifact_uri下"./mlruns/{experiment_id}/{run_id}/artifacts/trainer/"となる。
-#trainer="./mlruns/"
+# デフォルはトartifact_uri下"./mlruns/{experiment_id}/{run_id}/artifacts/Trainer/"となる。
+#Trainer="./mlruns/1/ba79349b64ac4493ac1f6c6eac306e68/artifacts/Trainer/"
 
 # Predictionのoutput、
-# デフォルトはartifact_uri下"./mlruns/{experiment_id}/{run_id}/artifacts/prediction/"となる。
-#trainer="./mlruns/"
+# デフォルトはartifact_uri下"./mlruns/{experiment_id}/{run_id}/artifacts/Prediction/"となる。
+#Prediction="./mlruns/1/ba79349b64ac4493ac1f6c6eac306e68/artifacts/Prediction/"
 
 [Preprocessor]
 train_columns=['PassengerId','Survived', 'Pclass', 'SibSp', 'Parch']
