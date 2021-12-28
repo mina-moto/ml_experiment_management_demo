@@ -9,15 +9,16 @@ task="Prediction"
 # input
 input="./input/"
 
+# 過去に実行済みのタスクの結果を使いたい場合、ここで指定する。
 # Preprocessorのoutput、Trainer、Evaluatorのinput
-# デフォルトはartifact_uri下、"./mlruns/{experiment_id}/{run_id}/artifacts/Preprocessor/"となる。
-#Preprocessor="./mlruns/1/ba79349b64ac4493ac1f6c6eac306e68/artifacts/Preprocessor/"
+# デフォルトはartifact_uri下、"./mlruns/{experiment_id}/{run_id}/artifacts/Preprocessor/"
+Preprocessor="./mlruns/1/ba79349b64ac4493ac1f6c6eac306e68/artifacts/Preprocessor/"
 # Trainerのoutput、Evaluatorのinput
-# デフォルはトartifact_uri下"./mlruns/{experiment_id}/{run_id}/artifacts/Trainer/"となる。
-#Trainer="./mlruns/1/ba79349b64ac4493ac1f6c6eac306e68/artifacts/Trainer/"
+# デフォルはトartifact_uri下"./mlruns/{experiment_id}/{run_id}/artifacts/Trainer/"
+Trainer="./mlruns/1/ba79349b64ac4493ac1f6c6eac306e68/artifacts/Trainer/"
 
 # Predictionのoutput、
-# デフォルトはartifact_uri下"./mlruns/{experiment_id}/{run_id}/artifacts/Prediction/"となる。
+# デフォルトはartifact_uri下"./mlruns/{experiment_id}/{run_id}/artifacts/Prediction/"
 #Prediction="./mlruns/1/ba79349b64ac4493ac1f6c6eac306e68/artifacts/Prediction/"
 
 [Preprocessor]
